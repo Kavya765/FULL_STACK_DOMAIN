@@ -1,0 +1,778 @@
+
+@font-face {
+    font-family: 'Righteous';
+    src: url('../fonts/Righteous-Regular.ttf');
+}
+.root-container, .main-container {
+    -fx-background-color: linear-gradient(to bottom,
+    #141414, /* Dark Grey */
+    #1A1A1A, /* Slightly Darker Grey */
+    #222222, /* Medium Dark Grey */
+    #2E2E2E  /* Darker Grey */
+    );
+}
+
+/* Scroll bar style */
+.scroll-bar {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+}
+
+/* Scroll bar thumb (the part that you drag) */
+.scroll-bar .thumb {
+    -fx-background-color: #ff9800; /* Orange color */
+    -fx-background-radius: 10px;
+}
+
+/* Scroll bar track (the area where the thumb slides) */
+.scroll-bar .track {
+    -fx-background-color: #2b2b2b; /* Dark background */
+    -fx-background-radius: 10px;
+}
+
+/* Scroll bar corner (bottom-right corner where horizontal and vertical bars meet) */
+.scroll-bar .corner {
+    -fx-background-color: transparent;
+}
+
+/* General ComboBox styling */
+.combo-box {
+    -fx-background-color: #333; /* Dark background */
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-border-color: #ff9800; /* Orange border */
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Change appearance when hovering over the ComboBox */
+.combo-box:hover {
+    -fx-background-color: #444; /* Slightly lighter on hover */
+}
+
+/* Dropdown list items */
+.combo-box .list-cell {
+    -fx-background-color: #222;
+    -fx-text-fill: white;
+}
+
+/* Highlight selected item */
+.combo-box .list-cell:hover {
+    -fx-background-color: #ff9800;
+    -fx-text-fill: black;
+}
+
+/* CSS style for the Cineverse title */
+.cineverse-title {
+    -fx-font-size: 70px;
+    -fx-font-family: 'Righteous';
+    -fx-fill: #FF9800;
+    -fx-font-weight: bold;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.5, 2, 2);
+}
+
+.cineverse-slogan{
+    -fx-font-size:15px;
+    -fx-font-family: 'Poppins';
+    -fx-fill: white;
+}
+
+.no-movies {
+    -fx-font-size: 20px;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+    -fx-alignment: center;
+    -fx-margin-top: 200px;
+}
+
+
+
+.header {
+    -fx-background-color: #141414;
+    -fx-padding: 5px 10px;
+    -fx-alignment: center-right;
+}
+.menu-container{
+    -fx-margin-top: 20px;
+}
+.admin-menu{
+    -fx-background-color: #555;
+    -fx-text-fill: white;
+    -fx-border-radius: 25px; /* Rounded corners */
+    -fx-padding: 2px 7px;
+
+}
+.admin-menu:hover{
+    -fx-background-color: #666; /* Slightly lighter on hover */
+    -fx-border-color: #333; /* Darker border on hover */
+}
+
+/* Search Bar Style (Rounder) */
+.search-bar {
+    -fx-background-color: #555;
+    -fx-text-fill: white;
+    -fx-border-radius: 25px; /* Rounded corners */
+    -fx-padding: 5px 20px; /* Padding for rounded look */
+    -fx-pref-width: 200px;
+    -fx-pref-height: 30px;
+}
+.community-button {
+    -fx-background-color: #555; /* Dark gray background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #444; /* Slightly darker border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.community-button:hover {
+    -fx-background-color: #b39ddb; /* Slightly lighter on hover */
+    -fx-border-color: #a66cff; /* Darker border on hover */
+}
+
+
+/* Reset Button Style */
+.reset-button{
+    -fx-background-color: transparent;
+    -fx-border: none;
+    -fx-cursor: hand; /* Make it look clickable */
+}
+
+/* Profile Username */
+.profile-username {
+    -fx-font-size: 30px;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-text-fill: orange; /* Orange color */
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+    -fx-padding: 10px;
+
+
+}
+
+/* Profile Email */
+.profile-email {
+    -fx-font-size: 16px;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #bbbbbb; /* Light gray */
+    -fx-alignment: center;
+    -fx-padding: 5px;
+}
+
+/* Profile Created At */
+.profile-created-at {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Poppins';
+    -fx-text-fill: #a66cff;
+    -fx-alignment: center;
+    -fx-padding: 5px;
+}
+
+/* Profile Header Section */
+.profile-header {
+    -fx-background-color: #2b2b2b;
+    -fx-padding: 15px;
+    -fx-border-radius: 10px;
+    -fx-border-color: orange;
+    -fx-border-width: 2px;
+}
+
+.profile-section {
+    -fx-border-radius: 10;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+    -fx-alignment: center;
+    -fx-margin: 10px;
+}
+
+/* Profile Labels for Watched, Watchlist, Favorites */
+.profile-watched,
+.profile-watchlist,
+.profile-favorites,
+.profile-yourreviews {
+    -fx-font-size: 18px;
+    -fx-font-family: 'Poppins';
+    -fx-font-weight: bold;
+    -fx-text-fill: orange;
+    -fx-padding: 5px;
+
+
+}
+
+/* Hover effect for profile section headers */
+/*.profile-watched:hover,*/
+/*.profile-watchlist:hover,*/
+/*.profile-favorites:hover,*/
+/*.profile-yourreviews {*/
+/*    -fx-background-color: #ff9800;*/
+/*    -fx-text-fill: #222;*/
+/*}*/
+
+/* Style for Movie Grid */
+.grid-pane {
+    -fx-padding: 10px;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+    -fx-background-color: #1e1e1e;
+    -fx-border-radius: 10px;
+}
+
+/* Style for Movie Posters */
+.grid-pane .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 5);
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-border-color: #fff;
+}
+.profile-section {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0, 0, 10);
+}
+
+/* Add rounded corners to profile containers */
+.profile-header,
+.profile-section,
+.profile-username,
+.profile-email {
+    -fx-border-radius: 15px;
+    -fx-background-radius: 15px;
+}
+/* Smooth transitions */
+.profile-username,
+.profile-email {
+    -fx-transition: background-color 0.3s, -fx-text-fill 0.3s;
+}
+
+/* Style for the horizontal line */
+.line {
+    -fx-stroke: #aaa;
+    -fx-stroke-width: 2;
+}
+
+
+
+
+/* Movie Details CSS */
+
+/* Style for movie poster */
+/* Ensure the root VBox content is centered */
+.root {
+    -fx-alignment: center;
+}
+
+/* Center movie poster */
+.movie-poster {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0, 0, 5);
+    -fx-border-radius: 10;
+    -fx-border-width: 5;
+    -fx-border-color: #fff;
+    -fx-padding: 10;
+    -fx-alignment: center; /* Ensures it's centered */
+    -fx-margin: auto; /* Helps with centering */
+}
+
+/* Center text inside labels */
+.movie-title {
+    -fx-font-size: 30px;
+    -fx-text-fill: #ff9800; /* Orange for contrast */
+    -fx-font-weight: bold;
+    -fx-padding: 8px 12px;
+    -fx-text-alignment: center;
+}
+
+.movie-release-date,
+.movie-director,
+.movie-actors,
+.movie-rated,
+.movie-genres {
+    -fx-font-size: 16px;
+    -fx-text-fill: #bbbbbb; /* Light gray for softer contrast */
+    -fx-padding: 5px 5px;
+    -fx-background-color: #333; /* Darker background */
+    -fx-border-radius: 5px;
+    -fx-border-color: #444;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+}
+
+/* Add spacing between sections */
+.movie-director,
+.movie-actors,
+.movie-rated,
+.movie-genres {
+    -fx-margin: 10px 10px;
+}
+
+/* Style for the movie plot */
+.movie-plot {
+    -fx-font-size: 15px;
+    -fx-text-fill: #dddddd; /* Slightly lighter text */
+    -fx-wrap-text: true;
+}
+
+.movie-rated:hover{
+    -fx-border-color: red;
+    -fx-background-color: red;
+    -fx-text-fill: white;
+}
+
+
+/* Add spacing to separate elements properly */
+.movie-title,
+.movie-release-date,
+.movie-director,
+.movie-actors,
+.movie-rated,
+.movie-genres,
+.movie-plot {
+    -fx-padding: 10px 15px;
+    -fx-spacing: 20px;
+}
+
+.movie-favorite,
+.movie-watched,
+.movie-watchlist {
+    -fx-background-color: transparent;
+    -fx-border: none;
+    -fx-cursor: hand; /* Make it look clickable */
+}
+
+
+/* Center text inside HBox (title + release date, director + actors, etc.) */
+HBox {
+    -fx-alignment: center;
+    -fx-spacing: 10px;
+}
+
+/* Review Section */
+.review-item,.review-box {
+    -fx-background-color: #333; /* Lighter color */
+    -fx-border-radius: 10px;
+    -fx-border-width: 1px;
+    -fx-border-color: lavender ; /* Orange border */
+    -fx-padding: 8px;
+    -fx-spacing: 6px;
+    -fx-alignment: center;
+    /*-fx-pref-width: 300px; /* Set max width */
+    -fx-max-width: 500px;
+   /* -fx-max-height: 30px;*/
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 4);
+}
+
+
+
+/* Reviewer name */
+.review-item .reviewer-name {
+    -fx-font-size: 16px;
+    -fx-text-fill: #B6894D; /* Orange for contrast */
+    -fx-font-weight: bold;
+}
+
+
+.review-title{
+    -fx-font-size: 16px;
+    -fx-text-fill: #a66cff;
+
+}
+.review-input {
+    -fx-background-color: white;
+    -fx-control-inner-background: white; /* Important for inner area */
+    -fx-text-fill: black; /* Optional: text color */
+    -fx-border-radius: 7px;
+    -fx-background-radius: 7px;
+    -fx-padding: 5px;
+    -fx-max-width: 500px;
+    -fx-max-height: 30px;
+}
+
+
+
+/* Review text */
+.review-item .review-text {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ddd;
+    -fx-wrap-text: true;
+    -fx-padding: 2px;
+    /*-fx-background-color: lavender;
+    -fx-border-radius: 5px;
+    -fx-border-color: #444;
+    -fx-border-width: 1px;*/
+
+}
+
+/* Review rating */
+.review-item .review-rating {
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffcc00; /* Gold color for rating */
+    -fx-font-weight: bold;
+    -fx-alignment: center;
+}
+
+/* Review Form */
+.review-form {
+    -fx-background-color: rgba(30, 30, 30, 0.9);
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #ff9800;
+    -fx-padding: 15px;
+    -fx-spacing: 10px;
+}
+
+/* Review Input */
+.review-form TextArea {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-background-color: #333;
+    -fx-border-color: #666;
+    -fx-border-radius: 5px;
+}
+
+/* Rating Spinner */
+.review-form .spinner {
+    -fx-background-color: #222;
+    -fx-border-color: #ff9800;
+    -fx-text-fill: white;
+}
+
+
+/* Submit Button */
+.review-form Button {
+    -fx-background-color: #ff9800;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 15px;
+    -fx-cursor: hand;
+}
+
+.review-form Button:hover {
+    -fx-background-color: #ffa726; /* Lighter orange on hover */
+}
+
+.submit-review {
+    -fx-background-color: #555; /* Dark gray background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #444; /* Slightly darker border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.submit-review:hover {
+    -fx-background-color: #b39ddb; /* Slightly lighter on hover */
+    -fx-border-color: #a66cff; /* Darker border on hover */
+}
+.already-reviewed{
+    -fx-font-size: 14px;
+    -fx-text-fill: #ffa726;
+}
+
+/* Style for the movie posters in the grid */
+.grid-pane .image-view {
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 5, 0, 0, 5);
+    -fx-border-radius: 10;
+    -fx-border-width: 3;
+    -fx-border-color: #fff;
+}
+
+/* Style for the grid container */
+.grid-pane {
+    -fx-padding: 10px;
+    -fx-hgap: 10;
+    -fx-vgap: 10;
+}
+
+/* Style for each movie poster in the profile grid */
+.grid-pane .image-view {
+    -fx-opacity: 0.9;
+    -fx-hover-opacity: 1;
+    -fx-transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover effect for movie posters */
+.grid-pane .image-view:hover {
+    -fx-opacity: 1;
+}
+
+/* radiobutton */
+/* Styling for RadioButton */
+.radio-button {
+    -fx-font-size: 12px;
+    -fx-font-family: "Arial";
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+    -fx-spacing: 3px;
+}
+
+.radio-button:hover {
+    -fx-background-color: #444444;
+    -fx-text-fill: orange;
+}
+
+.radio-button:selected {
+    -fx-background-color: #5c5c5c;
+    -fx-text-fill: orange;
+}
+
+.radio-button .radio-button-text {
+    -fx-font-weight: bold;
+}
+
+.radio-button .radio-button-graphic {
+    -fx-font-size: 14px; /* Adjust icon size */
+}
+
+
+/* Forum CSS */
+
+/* Forum Title */
+.forum-title {
+    -fx-font-size: 35px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Righteous";
+    -fx-text-fill: orange;
+    -fx-alignment: center;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.8), 10, 0.5, 2, 2);
+}
+
+/* Search Bar */
+.search-field {
+    -fx-background-color: #333333; /* Darker input field */
+    -fx-text-fill: white;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px;
+    -fx-pref-width: 400px;
+    -fx-border-color: #444;
+}
+
+/* Button - Back to Movies */
+.forum-backButton {
+    -fx-background-color: #333333; /* Dark blue-gray color for button */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-border-color: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 3, 0.2, 0, 2);
+}
+
+.forum-backButton:hover {
+    -fx-background-color: #34495e; /* Slightly lighter shade on hover */
+}
+
+/* General Button Styling */
+.forum-backButton:focused {
+    -fx-background-color: #34495e; /* Lighter shade on hover */
+}
+
+/* MovieForum CSS */
+/* General Styles */
+.movie-forum-title {
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Righteous";
+    -fx-text-fill: orange; /* Cinema Gold */
+    -fx-padding: 15px;
+    -fx-alignment: center;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.5), 3, 0.2, 0, 2);
+}
+
+.description {
+    -fx-font-size: 16px;
+    /*-fx-text-fill: #b0b0b0; /* Light grey text */
+    -fx-text-fill: #a66cff;
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+.post-textfield {
+    -fx-background-color: #333333; /* Darker input field */
+    -fx-text-fill: white;
+    -fx-border-radius: 8px;
+    -fx-padding: 8px;
+    -fx-pref-width: 400px;
+    -fx-border-color: #444;
+}
+
+.post-button {
+    -fx-background-color: #555; /* Dark gray background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #444; /* Slightly darker border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.post-button:hover {
+    -fx-background-color: #b39ddb; /* Slightly lighter on hover */
+    -fx-border-color: #a66cff; /* Darker border on hover */
+}
+
+.posts-container {
+    -fx-border-color: #555; /* Dark grey border color */
+    -fx-border-width: 2px; /* Border thickness */
+    -fx-border-radius: 8px; /* Rounded corners */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 4); /* Subtle shadow */
+    -fx-padding: 10px; /* Padding inside the container */
+    -fx-background-color: #333; /* Dark grey background */
+    -fx-max-width: 800px; /* Maximum width for the post container */
+}
+
+
+.post-box {
+    -fx-background-color: #1f1f1f; /* Dark background for posts */
+    -fx-padding: 12px;
+    -fx-background-radius: 12px;
+    -fx-min-height: 120px; /* Reduced height for posts */
+    -fx-border-radius: 12px;
+    -fx-border-color: #444;
+    -fx-border-width: 1px;
+    -fx-max-width: 800px; /* Set a max-width for the post */
+    -fx-alignment: top-left;
+}
+
+.post-author {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: orange; /* Gold for the author */
+}
+
+.post-text {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ddd; /* Light grey text */
+    -fx-alignment: top-left; /* Align text to the left */
+    -fx-padding-top: 5px;
+}
+
+.post-created-at {
+    -fx-font-size: 12px;
+    -fx-text-fill: #888; /* Light grey date */
+}
+
+.post-likes {
+    -fx-font-size: 14px;
+    -fx-text-fill: orange; /* Gold for likes */
+}
+
+.like-button {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+.replies-box {
+    -fx-background-color: #2a2a2a; /* Dark grey for reply section */
+    -fx-padding: 10px;
+    -fx-background-radius: 12px;
+    -fx-spacing: 10px;
+}
+
+.reply-box {
+    -fx-background-color: #333; /* Slightly lighter dark background */
+    -fx-padding: 10px; /* Reduced padding for replies */
+    -fx-background-radius: 10px;
+    -fx-border-radius: 10px;
+    -fx-max-height: 300px; /* Reduced height for replies */
+    -fx-max-width: 800px; /* Set a max-width for the reply */
+}
+
+.reply-user {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: orange; /* Gold for reply user */
+}
+
+.reply-date {
+    -fx-font-size: 12px;
+    -fx-text-fill: #999; /* Grey for reply date */
+}
+
+.reply-text {
+    -fx-font-size: 15px;
+    -fx-text-fill: #ddd; /* Light grey text */
+    -fx-alignment: top-left; /* Align text to the left */
+}
+
+.reply-likes {
+    -fx-font-size: 14px;
+    -fx-text-fill: orange; /* Gold for reply likes */
+}
+
+.reply-button {
+    -fx-background-color: #555; /* Dark gray background */
+    -fx-text-fill: white; /* White text */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 5px 12px;
+    -fx-background-radius: 5px;
+    -fx-border-color: #444; /* Slightly darker border */
+    -fx-border-width: 2px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand;
+    -fx-transition: all 0.3s ease-in-out;
+}
+
+.reply-button:hover {
+    -fx-background-color: #B6894D; /* Slightly lighter on hover */
+    -fx-border-color: orange; /* Darker border on hover */
+}
+
+.reply-icon {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-cursor: hand;
+}
+
+/* Show More / Show Less button */
+.toggle-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: orange;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-font-size: 14px;
+}
+
+.toggle-button:focused {
+    -fx-border-color: transparent;
+}
+
+/* Styling for the Show More/Show Less Button */
+.toggle-button {
+    -fx-text-fill: orange;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+.toggle-button:selected {
+    -fx-text-fill: orange;
+}
+
+.toggle-button:pressed {
+    -fx-background-color: transparent;
+    -fx-text-fill: #e6b800;
+}
+
+.toggle-button:hover {
+    -fx-text-fill: #b38900;
+}
+
+
+

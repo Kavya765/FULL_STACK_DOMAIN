@@ -1,0 +1,46 @@
+.root {
+    -fx-background-color: radial-gradient(center 50% 50%, radius 100%, #1a1a1a, #000000);
+}
+
+.title-text {
+    -fx-fill: orange;
+    -fx-font-family: "Righteous";
+    -fx-font-weight: bold;
+    -fx-font-size: 30px;
+    -fx-effect: dropshadow(gaussian, black, 5, 0, 5, 5);
+}
+
+.text-field {
+    -fx-font-size: 16px;
+    -fx-padding: 10px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+    -fx-border-color: #ffffff;
+    -fx-background-color: rgba(255, 255, 255, 1);
+    -fx-text-fill: #333;
+}
+
+.signup-button {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-background-radius: 25px;
+    -fx-border-radius: 25px;
+    -fx-background-color: linear-gradient(to right, #ff7e5f, #feb47b);
+    -fx-border-color: transparent;
+    -fx-padding: 10px;
+    -fx-cursor: hand;
+}
+
+.signup-button:hover {
+    -fx-background-color: linear-gradient(to right, #FF7F32, #8E44AD);
+}
+
+.message-label {
+    -fx-text-fill: red;
+}
+
+.login-link {
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+}
